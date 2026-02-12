@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Project Validator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="bg-glow"></div>
+  <main class="container">
+    <section class="hero">
+      <p class="tag">Developer Project Validator</p>
+      <h1>Stop Building Useless Projects</h1>
+      <p class="sub">
+        Enter your idea. AI checks market competition, monetization, target users,
+        feature direction, and gives a practical MVP plan.
+      </p>
+    </section>
+
+    <section class="panel">
+      <label for="idea">Your Project Idea</label>
+      <textarea id="idea" placeholder="Example: A tool that auto-generates local event websites for small communities..."></textarea>
+      <button id="analyzeBtn">Analyze Idea</button>
+      <p id="status"></p>
+    </section>
+
+    <section id="results" class="results hidden">
+      <article class="card">
+        <h2>Market Competition</h2>
+        <p id="market_competition"></p>
+      </article>
+
+      <article class="card">
+        <h2>Monetization Potential</h2>
+        <p id="monetization_potential"></p>
+      </article>
+
+      <article class="card">
+        <h2>Target Users</h2>
+        <p id="target_users"></p>
+      </article>
+
+      <article class="card">
+        <h2>Feature Suggestions</h2>
+        <ul id="feature_suggestions"></ul>
+      </article>
+
+      <article class="card">
+        <h2>MVP Plan</h2>
+        <ol id="mvp_plan"></ol>
+      </article>
+
+      <article class="card highlight">
+        <h2>Risk Score</h2>
+        <p id="risk_score" class="risk"></p>
+        <h3>Verdict</h3>
+        <p id="summary"></p>
+      </article>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

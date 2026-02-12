@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Tooling/cache
+.pycache_local/
+.pytest_cache/
+
+# OS/editor
+.DS_Store
+.vscode/
+
+# Local scratch files
+practise.py
